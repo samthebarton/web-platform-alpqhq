@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1 onclick="this.innerHTML = ':3'">Click Here</h1>
+
+    <form id="my-form">
+      <input type="text" id="input" placeholder="First Name..." />
+      <input type="text" id="input-two" placeholder="Surname..." />
+      <input type="button" id="my-button" value="submit" />
+      Password: <input type="password" id="my-input-three"><br><br>
+<input type="checkbox" onclick="myFunction()">Show Password
+    </form>
+    <p id="output"></p>
+    <p id="output-two"></p>
+    <script>
+      var myButton = document.getElementById('my-button');
+      var myForm = document.getElementById('my-form');
+      var myOutput = document.getElementById('output');
+      var myOutputTwo = document.getElementById('output-two');
+
+      Password: <input type="password" id="myInputThree">
+<input type="checkbox" onclick="myFunction()">Show Password;
+    }
+  }
+
+      myForm.addEventListener('keypress', function (e) {
+        if (event.key === 'Enter') {
+          //document.getElementById("myButton").click();
+          var myInput = document.getElementById('input').value;
+          var myInputTwo = document.getElementById('input-two').value;
+          myOutputTwo.innerHTML = myInputTwo;
+          myOutput.innerHTML = myInput;
+          myForm.reset();
+
+          //console.log('key pressed');
+        }
+      });
+
+      myButton.addEventListener('click', function (e) {
+        var myInput = document.getElementById('input').value;
+        var myInputTwo = document.getElementById('input-two').value;
+        myOutputTwo.innerHTML = myInputTwo;
+        myOutput.innerHTML = myInput;
+        myForm.reset();
+        //console.log(myInput);
+        //console.log('clicked');
+      });
+    </script>
+  </body>
+</html>
